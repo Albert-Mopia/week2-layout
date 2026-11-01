@@ -1,10 +1,11 @@
 import "./globals.css";
 import Header from "./components/header";
 import Footer from "./components/footer";
+import Sidebar from "./components/sidebar";
 
 export const metadata = {
   title: "Agave Shooters",
-  description: "Week 2 Layout Assignment",
+  description: "Week 3 Layout Assignment",
 };
 
 export default function RootLayout({ children }) {
@@ -12,11 +13,13 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <Header />
+          <div className="flex">
+            <Sidebar />
 
-        <main className="min-h-screen flex items-center justify-center">
-          {children}
-        </main>
-
+            <main className="flex-1 p-8">
+            {children}
+            </main>
+          </div>
         <Footer />
       </body>
     </html>
@@ -29,3 +32,11 @@ const imperialScript = Imperial_Script({
   weight: "400",
   subsets: ["latin"],
 });
+
+import { Roboto } from "next/font/google";
+
+export const roboto = Roboto({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+});
+

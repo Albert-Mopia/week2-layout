@@ -6,18 +6,37 @@ export default function Header() {
       <h1
         className="text-5xl"
         style={{ fontFamily: "Imperial Script" }}
-      >
+        >
         Agave Shooters
       </h1>
 
       <nav
-        className="flex gap-16 text-xl"
-        style={{ fontFamily: "Roboto" }}
-      >
-        <Link href="/">Home</Link>
-        <Link href="/about">About</Link>
-        <Link href="/contact">Contact</Link>
+      className="flex gap-16 text-l"
+      style={{ fontFamily: "Roboto" }}
+        >
+        <Link
+          href="/"
+          className="hover:text-white transition-colors duration-300"
+          >
+          Home
+        </Link>
+
+        <Link
+          href="/about"
+          className="hover:text-white transition-colors duration-300"
+          >
+          About
+        </Link>
+
+        <Link
+          href="/contact"
+          className="hover:text-white transition-colors duration-300"
+          >
+          Contact
+        </Link>
       </nav>
+
     </header>
   );
 }
+
